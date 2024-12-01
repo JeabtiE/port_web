@@ -1,0 +1,677 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffff;
+    color: #4a4a4a;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    padding-bottom: 30px;
+    z-index: 1000;
+    position: fixed;
+
+}
+
+
+.home-position {
+    padding-bottom: 62px;
+    padding-top: 65px;
+    padding-right: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+.home-button {
+    display: inline-block;
+    background: #343a40;
+    backdrop-filter: blur(10px);
+    border: 1px solid #f4f4f4;
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/* Home Button Hover Effect */
+.home-button:hover {
+    background: #f4f4f4;
+    box-shadow: 0px 6px 20px #f4f4f4;
+    backdrop-filter: blur(10px);
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Home Button Active State (Click) */
+.home-button:active {
+    transform: scale(0.95);
+}
+
+.home-button {
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+.text {
+    font-weight: bold;
+    font-size: 1.0rem;
+    padding-left: 60px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    letter-spacing: 0.1cap;
+}
+
+.logo {
+    padding-bottom: 50px;
+    position: absolute;
+    left: 45px;
+    padding-top: 65px;
+}
+
+.logo1 {
+    position: absolute;
+    left: 20px;
+    padding-top: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-top: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.nav-links a:hover {
+    background: #f4f4f4;
+    box-shadow: 0px 6px 20px #f4f4f4;
+    backdrop-filter: blur(100px);
+    border-radius: 12px;
+    color: #2e2e2e;
+    transform: translateY(-2px);
+}
+
+.nav-links:active {
+    transform: scale(0.95);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 20Fpx;
+    right: 30px;
+}
+
+.hamburger span {
+    background: white;
+    border-radius: 20px;
+    margin: 3px;
+    transition: 0.4s;
+    width: 30px;
+    height: 4px;
+
+}
+
+
+
+/* Navbar Responsiveness */
+@media screen and (max-width: 1024px) {
+    .navbar {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 40px 20px;
+
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .home-button {
+        display: none;
+    }
+}
+
+
+
+.nav-links.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links.active li {
+    margin: 20px 0;
+}
+
+
+
+/* Banner Section */
+.banner {
+    margin-top: 60px;
+    /* Space for fixed navbar */
+    text-align: center;
+}
+
+.banner-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 480px) {
+    .banner {
+        display: none;
+    }
+}
+
+
+.header-text {
+    background-color: #ffffff;
+    color: #2e2e2e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    padding-top: 70px;
+    padding-bottom: 0px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+/* จัดการ container ทั้งหมด */
+.hero-section {
+    background-color: #ffffff;
+    /* สีพื้นหลัง */
+    color: #2e2e2e;
+    /* สีข้อความ */
+    text-align: center;
+    padding: 70px 20px;
+    margin-bottom: 150px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* จัดกล่องเนื้อหาให้แยกเป็น text และ image */
+.content {
+    display: flex;
+    flex-direction: column;
+    /* เปลี่ยนเป็นแถวเมื่อหน้าจอเล็ก */
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hero Section Responsiveness */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row;
+        /* เปลี่ยนเป็นแนวนอนเมื่อหน้าจอใหญ่ */
+        justify-content: space-between;
+    }
+
+    .hero-section {
+        padding: 50px 20px;
+    }
+}
+
+
+/* สไตล์ข้อความ */
+.text {
+    flex: 1;
+    max-width: 600px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.text h2 {
+    font-size: 2.0rem;
+    margin-bottom: 10px;
+    white-space: nowrap;
+    text-align: center;
+    background: linear-gradient(45deg, #f8ca52, #f4bb3a, #ff3131, #fc0d2a);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 2px 2px 5px #ff906e;
+    animation: gradient-move 4s infinite linear;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: -100% 50%;
+    }
+}
+
+
+.text p {
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+
+.contact_button {
+    background-color: #fff;
+    width: 50px;
+    height: 50px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    /* จัดเรียงในแนวตั้ง */
+    align-items: flex-start;
+    /* จัดตำแหน่งเริ่มต้นจากซ้าย */
+    margin-top: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 20px rgba(58, 58, 58, 0.3);
+}
+
+.contact_button img {
+    width: 50%px;
+    height: auto;
+    padding: 10px;
+}
+
+.contact_button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* สำหรับคอนเทนเนอร์ของปุ่ม */
+.button-container {
+    display: flex;
+    /* ใช้ Flexbox */
+    justify-content: center;
+    /* จัดให้อยู่ตรงกลาง */
+    gap: 10px;
+    /* ช่องว่างระหว่างปุ่ม */
+    margin-top: 10px;
+    /* ระยะห่างด้านบน */
+}
+
+/* Buttons and Contact Section Responsiveness */
+@media screen and (max-width: 570px) {
+    .button-container {
+        display: none;
+    }
+}
+
+
+.interest-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    padding: 3rem;
+}
+
+.interest {
+    flex: 1;
+}
+
+.interest h3 {
+    color: #2e2e2e;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.interest ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #2e2e2e;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 15px;
+}
+
+.interest li {
+    padding-top: 5px;
+}
+
+.hobbies {
+    flex: 1;
+}
+
+.hobbies h3 {
+    color: #2e2e2e;
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.hobbies ul {
+    list-style-type: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+    color: #2e2e2e;
+    font-family: "Quicksand", sans-serif;
+    padding-top: 15px;
+}
+
+.hobbies li {
+    padding-top: 5px;
+    white-space: initial;
+}
+
+/* Interest and Hobbies Responsiveness */
+@media screen and (max-width: 768px) {
+    .interest-container {
+        flex-direction: column;
+        gap: 20px;
+        padding: 1rem;
+    }
+
+    .interest,
+    .hobbies {
+        width: 100%;
+    }
+}
+
+
+.my-link {
+    text-decoration: none;
+    /* เอาเส้นขีดใต้ลิงก์ออก */
+    color: #2e2e2e;
+}
+
+/* สไตล์รูปภาพ */
+.image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px #ffffff;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #fff;
+    color: #4a4a4a;
+    font-size: 0.9rem;
+}
+
+/* Projects Section */
+/* General styles for the section */
+.section {
+    padding: 50px 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+/* Glass-box effect for the container */
+.glass-box {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-bottom: 200px;
+}
+
+.glass-box h1 {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 2.5rem;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+}
+
+.glass-box p {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-size: 1.0rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+
+
+/* Grid layout for the project items */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 equal-width columns */
+    grid-template-rows: repeat(3, 1fr);
+    /* 3 equal-height rows */
+    gap: 20px;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Individual project item styling */
+.project-item {
+    text-align: center;
+    background: #fff;
+    padding: 20px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside project items */
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Hover effect for project items */
+.project-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Project description text */
+.project-item p {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+    color: #555;
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+
+/* contact */
+#contact {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #343a40;
+    padding-top: 0px;
+}
+
+.context {
+    justify-content: center;
+    align-items: center;
+    padding-right: 700px;
+    margin-top: 30px;
+    color: #f4f4f4;
+    font-size: 24px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    letter-spacing: 0.1cap;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-right: 40px;
+    position: absolute;
+    right: 45px;
+    margin-top: -50px;
+}
+
+.gallery-img {
+    width: 50px;
+    height: auto;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 100%;
+}
+
+.gallery-img:hover {
+    background: #343a40;
+    box-shadow: 0px 6px 20px #f4f4f4;
+    backdrop-filter: blur(10px);
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Home Button Active State (Click) */
+.gallery-img:active {
+    transform: scale(0.95);
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 480px) {
+    #contact {
+        display: flex;
+    }
+
+    .gallery-img {
+        max-width: 80%;
+        height: auto;
+    }
+
+    .context {
+        display: none;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-img {
+        display: none;
+    }
+}
+
+/* Project Grid Responsiveness */
+@media screen and (max-width: 1024px) {
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+@media screen and (max-width: 600px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Typography Responsiveness */
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Ensure images are responsive */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Viewport meta tag recommendation */
+/* Add this to your HTML <head> section */
+/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> */

@@ -1,0 +1,362 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #ffff;
+    color: #4a4a4a;
+    margin-top: 250px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 450vh;
+}
+
+/* Navbar Styling */
+.navbar {
+    background-color: #343a40;
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 20px;
+    padding-bottom: 30px;
+    z-index: 1000;
+    position: fixed;
+}
+
+
+.home-position {
+    padding-bottom: 62px;
+    padding-top: 65px;
+    padding-right: 20px;
+    position: absolute;
+    right: 10px;
+}
+
+/* Home Button Base Style */
+.home-button {
+    display: inline-block;
+    background: #343a40;
+    backdrop-filter: blur(10px);
+    border: 1px solid #f4f4f4;
+    border-radius: 15px;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    text-decoration: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    align-self: flex-end;
+    margin-top: 10px;
+}
+
+/* Hover Effect */
+.home-button:hover {
+    background: #f4f4f4;
+    box-shadow: 0px 6px 20px #f4f4f4;
+    backdrop-filter: blur(10px);
+    color: #333;
+    transform: translateY(-2px);
+}
+
+/* Active (Click) Effect */
+.home-button:active {
+    transform: scale(0.95);
+    background: #e0e0e0;
+    /* เพิ่มสีเปลี่ยนเมื่อคลิก */
+    color: #222;
+    /* เปลี่ยนสีตัวอักษร */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.text {
+    font-weight: bold;
+    font-size: 1.0rem;
+    padding-left: 60px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 1000;
+    font-style: normal;
+    letter-spacing: 0.1cap;
+}
+
+.logo {
+    padding-bottom: 50px;
+    position: absolute;
+    left: 45px;
+    padding-top: 65px;
+}
+
+.logo1 {
+    position: absolute;
+    left: 20px;
+    padding-top: 20px;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding-top: 10px;
+    transition: all 0.5s ease;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.nav-links a:hover {
+    background: #f4f4f4;
+    box-shadow: 0px 6px 20px #f4f4f4;
+    backdrop-filter: blur(100px);
+    border-radius: 12px;
+    color: #333;
+    transform: translateY(-2px);
+}
+
+.nav-links:active {
+    transform: scale(0.95);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 3px;
+    cursor: pointer;
+    position: absolute;
+    top: 20Fpx;
+    right: 30px;
+}
+
+.hamburger span {
+    background: white;
+    border-radius: 20px;
+    margin: 3px;
+    transition: 0.4s;
+    width: 30px;
+    height: 4px;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 940px) {
+    nav {
+        padding: 10px 15px;
+        /* ลด padding เมื่อจอเล็กลง */
+    }
+
+    .nav-links {
+        display: none;
+        /* ซ่อนเมนู links */
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #2e2e2e;
+        width: 200px;
+        flex-direction: column;
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar {
+        padding: 40px 20px;
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* แสดงเมนูเมื่อคลิก hamburger */
+    }
+
+    /* ปรับ home-button ในหน้าจอเล็ก */
+    .home-position {
+        padding-bottom: 80px;
+        padding-top: 65px;
+        padding-right: 20px;
+        position: absolute;
+        right: 10px;
+    }
+
+    .home-button {
+        display: inline-block;
+        /* ยังคงแสดงผลใน responsive */
+    }
+
+    .home-button:hover {
+        display: inline-block;
+    }
+
+    .home-button:active {
+        transform: scale(0.95);
+        background: #d1d1d1;
+        /* เพิ่มสีเปลี่ยนใน responsive */
+    }
+}
+
+.glass-box {
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+    width: 600px;
+    padding: 80px;
+    color: #333;
+    align-items: center;
+    margin-top: 100px; /* เพิ่มระยะห่างจากขอบบน */
+    margin-bottom: 300px;
+}
+
+.icon-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.icon-section img {
+    width: 70%;
+    /* ขนาดไอคอน */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 6px 20px #2e2e2e;
+    object-fit: cover;
+    /* ทำให้รูปครอบคลุมพื้นที่ */
+    transition: transform 0.3s ease;
+    /* เพิ่มเอฟเฟกต์การเปลี่ยนแปลง */
+}
+
+.icon-section:hover img {
+    transform: scale(1.5);
+    /* ขยายรูปภาพเมื่อเมาส์วาง */
+}
+
+.icon-section img:not(.active) {
+    transform: scale(1);
+}
+
+.title1 {
+    text-align: center;
+    font-size: 32px;
+    background: linear-gradient(45deg, #C0C0C0, #D9D9D9, #ffffff, #A8A8A8);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 20px;
+    font-family: 'Quicksand', sans-serif;
+    text-shadow: 2px 2px 5px rgba(192, 192, 192, 0.7);
+    animation: gradient-move 4s infinite linear;
+}
+
+@keyframes gradient-move {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: -100% 50%;
+    }
+}
+
+.title2 {
+    text-align: center;
+    font-size: 24px;
+    color: #1fa2ff;
+    margin-bottom: 20px;
+    font-family: "Quicksand", sans-serif;
+}
+
+.details {
+    margin-bottom: 20px;
+}
+
+.details p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #2e2e2e;
+    font-family: "Quicksand", sans-serif;
+}
+
+.description li {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 80px;
+}
+
+.description p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    font-family: "Quicksand", sans-serif;
+    margin-bottom: 80px;
+}
+
+/* Loading Screen */
+#loading-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#loading-screen p {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #5e2b82;
+}
+
+/* Loader Animation */
+.loader {
+    border: 8px solid #f3f3f3;
+    /* เส้นสีพื้นหลัง */
+    border-top: 8px solid #5e2b82;
+    /* เส้นสีหลัก */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+}
+
+/* Animation Keyframes */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Main Content (hidden by default) */
+#main-content {
+    text-align: center;
+}
