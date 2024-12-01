@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel="stylesheet" href="styles1.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="features.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="text">
+                <p>The 11th Indonesia Inventors Day (IYIA)</p>
+            </div>
+        </div>
+        <div class="logo1">
+            <img height="50" width="50" src="img/icon5.png">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#information">Information</a></li>
+            <li><a href="#picture">Picture</a></li>
+        </ul>
+        <div class="home-position">
+            <a href="index.html" class="home-button">Back</a>
+        </div>
+    </nav>
+
+    <section id="#information">
+        <div class="glass-box">
+            <div class="icon-section">
+                <img src="img/certi1.png">
+            </div>
+            <h1 class="title1">Bronze Medal Award</h1>
+            <h2 class="title2">Establishing The Relationship Geometric Shapes
+                To Measure The Weight Of A Watermelon</h2>
+            <div class="details">
+                <p><strong>Type:</strong> International competitions</p>
+                <p><strong>Description:</strong> Project competition</p>
+                <p><strong>Date:</strong> 28 → 31 August, 2024</p>
+            </div>
+            <div class="description">
+                <p>
+                    This project aims to develop technology utilizing the OpenCV library in conjunction with the
+                    application of definite integration techniques to revolve around the X-axis of an ellipsoidal
+                    equation for efficiently estimating the weight of watermelons. The approach is designed to enhance
+                    convenience and achieve a level of accuracy comparable to conventional methods involving direct use
+                    of weighing scales.
+
+                    This project was awarded the Bronze Medal at the international innovation competition Innovation
+                    Inventors Day (IYIA), presented in English as an oral presentation. The event took place from August
+                    28–31, 2024, under the project title Establishing the Relationship of Ellipsoidal Geometric Shapes
+                    to Measure the Weight of a Watermelon in the field of Agricultural Innovation and Technology.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // เลือกองค์ประกอบทั้งหมดที่อยู่ใน class "icon-section"
+        const icons = document.querySelectorAll('.icon-section img');
+
+        icons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // ถ้าเพิ่ม class "active" ให้ขยายรูป
+                if (icon.classList.contains('active')) {
+                    icon.classList.remove('active');
+                } else {
+                    // ลบ "active" จากไอคอนอื่น
+                    icons.forEach(i => i.classList.remove('active'));
+                    // เพิ่ม "active" ให้ไอคอนที่ถูกแตะ
+                    icon.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certificates</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="features.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="text">
+                <p>ICT Challenge 2024</p>
+            </div>
+        </div>
+        <div class="logo1">
+            <img height="50" width="50" src="img/icon5.png">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#information">Information</a></li>
+            <li><a href="#picture">Picture</a></li>
+        </ul>
+        <div class="home-position">
+            <a href="index.html" class="home-button">Back</a>
+        </div>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div>
+
+    </div>
+    <div class="glass-box">
+        <div class="icon-section">
+            <img src="img/port4.png" alt="Icon">
+        </div>
+        <h1 class="title1">Second Runner-Up Award</h1>
+        <h2 class="title2">ICT Challenge 2024</h2>
+        <div class="details">
+            <p><strong>Type:</strong> National competitions</p>
+            <p><strong>Description:</strong> Academic Competition: Computer Science and Information Technology Quiz
+                Contest</p>
+            <p><strong>Date:</strong> 11 November, 2024</p>
+        </div>
+        <div class="description">
+            <p>
+                Im was awarded Second Runner-Up and a scholarship of 3,000 Baht at the *Computer Science and
+                Information Technology Quiz Contest*, held at the Faculty of Information Technology, King Mongkut's
+                University of Technology Thonburi, on November 11, 2024.
+
+                The team advanced to the semi-finals as one of the top 90 teams from approximately 220 teams nationwide
+                and ultimately secured a place in the final round, competing among the top 10 teams.
+
+                The competition covered four main topics:
+                <li>Network and Cloud Computing</li>
+                <li>Hardware and Operating system</li>
+                <li>Data Structure and Algorithm</li>
+                <li>Artificial Intelligence</li>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // เลือกองค์ประกอบทั้งหมดที่อยู่ใน class "icon-section"
+        const icons = document.querySelectorAll('.icon-section img');
+
+        icons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // ถ้าเพิ่ม class "active" ให้ขยายรูป
+                if (icon.classList.contains('active')) {
+                    icon.classList.remove('active');
+                } else {
+                    // ลบ "active" จากไอคอนอื่น
+                    icons.forEach(i => i.classList.remove('active'));
+                    // เพิ่ม "active" ให้ไอคอนที่ถูกแตะ
+                    icon.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

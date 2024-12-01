@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certificates</title>
+    <link rel="stylesheet" href="styles5.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="features.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="text">
+                <p>Other certificates</p>
+            </div>
+        </div>
+        <div class="logo1">
+            <img height="50" width="50" src="img/icon5.png">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#information">Information</a></li>
+            <li><a href="#picture">Picture</a></li>
+        </ul>
+        <div class="home-position">
+            <a href="index.html" class="home-button">Back</a>
+        </div>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div>
+
+    </div>
+    <div class="glass-box">
+        <div class="icon-section">
+            <img src="img/certi4.jpg" alt="Icon">
+        </div>
+        <h1 class="title1">Silver Medal Award</h1>
+        <h2 class="title2">Game - based VR computer
+            for learning unicellular animals</h2>
+        <div class="details">
+            <p><strong>Type:</strong> National competitions</p>
+            <p><strong>Description:</strong> High School Level Science and Mathematics Project Competition</p>
+            <p><strong>Date:</strong> 18 August, 2024</p>
+        </div>
+        <div class="description">
+            <p>
+                i got a Silver Medal in the High School Level Science and Mathematics Project Competition for the
+                project titled *Game - based VR computer for learning unicellular animals*. The project
+                was presented at the National Science Week 2021, held at University of Phayao.
+            </p>
+        </div>
+
+        <div class="icon-section">
+            <img src="img/certi10.png" alt="Icon">
+        </div>
+        <h2 class="title2">Passed the online test on Information Technology knowledge.</h2>
+        <div class="details">
+            <p><strong>Type:</strong> Online test</p>
+            <p><strong>Description:</strong> Information Technology online test.</p>
+            <p><strong>Date:</strong> 14 October, 2024</p>
+        </div>
+        <div class="description">
+            <p></p>
+        </div>
+
+        <div class="icon-section">
+            <img src="img/certi7.jpg" alt="Icon">
+        </div>
+        <h2 class="title2">Project Presentation to the Inspector-General of the Prime Minister </h2>
+        <div class="details">
+            <p><strong>Type:</strong> Project Presentation</p>
+            <p><strong>Project's title:</strong> Food Expiry Date Notification System.</p>
+            <p><strong>Date:</strong> 10 March, 2023</p>
+        </div>
+        <div class="description">
+            <p>
+                On March 10, 2023, I was selected as a student representative to present the project to the
+                Inspector-General of the Prime Minister's Office and the inspection team of the 16th Regional
+                Inspectorate. The team visited to monitor government policy issues, specifically *Human Capacity
+                Development throughout Life*. The presentation took place at Chulabhorn Science School, Chiang Rai,
+                where I presented the innovation titled *Food Expiry Date Notification System*.
+            </p>
+        </div>
+
+        <div class="icon-section">
+            <img src="img/certi11.png" alt="Icon">
+        </div>
+        <h2 class="title2">English For Science Research Camp</h2>
+        <div class="details">
+            <p><strong>Type:</strong> Academic camp</p>
+            <p><strong>Description:</strong> English For Science Research Camp I & II</p>
+            <p><strong>Date:</strong> 16 - 17 December, 2023</p>
+        </div>
+        <div class="description">
+            <p>
+                Selected to participate in the English Language Camp for Research, led by instructors from Mae Fah Luang
+                University.
+                English Camp 1: Reading & Searching Skills
+                English Camp 2: Writing & Presentation Skills
+            </p>
+        </div>
+
+        <div class="icon-section">
+            <img src="img/certi12.png" alt="Icon">
+        </div>
+        <h2 class="title2">DeafTech Hackathon 2024</h2>
+        <div class="details">
+            <p><strong>Type:</strong> Hackathon competitions</p>
+            <p><strong>Description:</strong> Innovation Competition for deaf's people. </p>
+            <p><strong>Date:</strong> 27 October, 2024</p>
+        </div>
+        <div class="description">
+            <p>
+                Participated in the *DeafTech Hackathon 2024: Innovation for the Deaf Towards Thai Society*, an
+                innovation competition for people with hearing disabilities. The project presented was *Deaf Job: A Job
+                Search Website for People with Hearing Disabilities* aimed at reducing occupational disparities.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // เลือกองค์ประกอบทั้งหมดที่อยู่ใน class "icon-section"
+        const icons = document.querySelectorAll('.icon-section img');
+
+        icons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // ถ้าเพิ่ม class "active" ให้ขยายรูป
+                if (icon.classList.contains('active')) {
+                    icon.classList.remove('active');
+                } else {
+                    // ลบ "active" จากไอคอนอื่น
+                    icons.forEach(i => i.classList.remove('active'));
+                    // เพิ่ม "active" ให้ไอคอนที่ถูกแตะ
+                    icon.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

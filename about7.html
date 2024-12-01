@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>certificates</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+    <link href="features.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Quicksand:wght@300..700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <div class="text">
+                <p>The 11th Indonesia Inventors Day (IYIA)</p>
+            </div>
+        </div>
+        <div class="logo1">
+            <img height="50" width="50" src="img/icon5.png">
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#information">Information</a></li>
+            <li><a href="#picture">Picture</a></li>
+        </ul>
+        <div class="home-position">
+            <a href="index.html" class="home-button">Back</a>
+        </div>
+        <!-- Hamburger Icon -->
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div>
+
+    </div>
+    <div class="glass-box">
+        <div class="icon-section">
+            <img src="img/your-icon-path.png" alt="Icon">
+        </div>
+        <h2 class="title">Establishing The Relationship Geometric Shapes 
+            To Measure The Weight Of A Watermelon</h2>
+        <div class="details">
+            <p><strong>Type:</strong> International competitions</p>
+            <p><strong>Description:</strong> Social Network Personality Test</p>
+            <p><strong>Date:</strong> April 27, 2023 → April 28, 2023</p>
+        </div>
+        <div class="description">
+            <p>
+                Public services that protect help society through spreading awareness of
+                the problem of online sexual exploitation. Help assess personality
+                Internet usage habits, allow users to review themselves from doing
+                assessments. Help assess the risk of committing and committing crimes. It
+                is a channel for assistance linked to relevant government agencies. I
+                have a duty to be the team leader. Plan the division of duties.
+                Coordinate and help members and design the UI of the platform. From this
+                work, I used my creativity and have more leadership.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // เลือกองค์ประกอบทั้งหมดที่อยู่ใน class "icon-section"
+        const icons = document.querySelectorAll('.icon-section img');
+    
+        icons.forEach(icon => {
+            icon.addEventListener('click', () => {
+                // ถ้าเพิ่ม class "active" ให้ขยายรูป
+                if (icon.classList.contains('active')) {
+                    icon.classList.remove('active');
+                } else {
+                    // ลบ "active" จากไอคอนอื่น
+                    icons.forEach(i => i.classList.remove('active'));
+                    // เพิ่ม "active" ให้ไอคอนที่ถูกแตะ
+                    icon.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
